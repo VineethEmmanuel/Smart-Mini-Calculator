@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Montserrat, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
