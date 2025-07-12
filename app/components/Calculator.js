@@ -2,12 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import Display from "./Display";
+import KeyboardControlsModal from "./KeyboardControlsModal";
 
 const Calculator = ({ onAddToHistory }) => {
   const [display, setDisplay] = useState("");
   const [expression, setExpression] = useState("");
   const [lastInputWasOperator, setLastInputWasOperator] = useState(false);
   const [justCalculated, setJustCalculated] = useState(false);
+  const [showKeyboardModal, setShowKeyboardModal] = useState(false);
 
   // --- Calculator Functions ---
 
@@ -331,11 +333,54 @@ const Calculator = ({ onAddToHistory }) => {
   return (
     <div
       className="
-      bg-rose-300 shadow-2xl rounded-xl p-6 w-full max-w-md
-      transform transition-all duration-300 hover:scale-101 hover:shadow-3xl 
+      bg-rose-300 shadow-2xl rounded-2xl p-6 w-full max-w-md
+      transform transition-all duration-300
     "
     >
-      <h1 className="text-white font-bold">SMART CALCULATOR</h1>
+      <div className="flex mb-2 grid-cols-2 gap-2">
+        <button
+          onClick={() => setShowKeyboardModal(true)}
+          className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700
+        focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2
+        transition-all duration-200 ease-in-out shadow-sm"
+          aria-label="Show keyboard controls"
+        >
+          <svg
+            width="32px"
+            height="32px"
+            viewBox="0 0 32 32"
+            id="icon"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <title>keyboard</title>
+            <path d="M28,26H4a2,2,0,0,1-2-2V10A2,2,0,0,1,4,8H28a2,2,0,0,1,2,2V24A2,2,0,0,1,28,26ZM4,10V24H28V10Z" />
+            <rect x="10" y="20" width="11" height="2" />
+            <rect x="6" y="12" width="2" height="2" />
+            <rect x="10" y="12" width="2" height="2" />
+            <rect x="14" y="12" width="2" height="2" />
+            <rect x="18" y="12" width="2" height="2" />
+            <rect x="6" y="20" width="2" height="2" />
+            <rect x="6" y="16" width="2" height="2" />
+            <rect x="10" y="16" width="2" height="2" />
+            <rect x="14" y="16" width="2" height="2" />
+            <rect x="22" y="12" width="4" height="2" />
+            <rect x="22" y="16" width="4" height="2" />
+            <rect x="18" y="16" width="2" height="2" />
+            <rect x="23" y="20" width="3" height="2" />
+            <rect
+              id="_Transparent_Rectangle_"
+              data-name=" Transparent Rectangle "
+              className="fill-none"
+              width="32"
+              height="32"
+            />
+          </svg>
+        </button>
+        <h1 className="text-black font-bold self-center">
+          SMART MINI CALCULATOR
+        </h1>
+      </div>
       <Display expression={expression} displayValue={display} />
 
       <div className="grid grid-cols-4 gap-4">
@@ -360,6 +405,9 @@ const Calculator = ({ onAddToHistory }) => {
           />
         ))}
       </div>
+      {showKeyboardModal && (
+        <KeyboardControlsModal onClose={() => setShowKeyboardModal(false)} />
+      )}
     </div>
   );
 };

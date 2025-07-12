@@ -19,7 +19,8 @@ const History = ({ history, onClearHistory, onDeleteItem }) => {
                 key={index}
                 className="
                 bg-white bg-opacity-10 p-3 rounded-md text-white text-sm break-words shadow-sm
-                flex justify-between items-center // Use flex to align content and button
+                flex justify-between items-center
+                opacity-0 animate-fadeInUp
               "
               >
                 <div className="flex-grow">
@@ -38,7 +39,7 @@ const History = ({ history, onClearHistory, onDeleteItem }) => {
                     ml-4 p-1 rounded-full bg-red-400 text-white text-xs font-bold
                     hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-[#ed486e]
                     transition-all duration-200 ease-in-out
-                    w-6 h-6 flex items-center justify-center // Fixed size for round button
+                    w-6 h-6 flex items-center justify-center 
                   "
                   aria-label={`Delete ${item.expression} = ${item.result}`}
                 >

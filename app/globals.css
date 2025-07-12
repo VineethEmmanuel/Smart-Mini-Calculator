@@ -26,19 +26,38 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px; /* width of the scrollbar */
+  width: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* Light track for dark background */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3); /* Lighter thumb for dark background */
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5); /* Even lighter on hover */
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Keyframes for fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to elements with animate-fadeInUp class */
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+  /* Add a delay based on index if you want staggered animation */
+  /* animation-delay: var(--animation-delay, 0s); */
 }

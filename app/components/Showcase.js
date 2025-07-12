@@ -4,10 +4,10 @@ const Showcase = ({ presenterName, projectTitle, onLaunchCalculator }) => {
   return (
     <div
       className="
-      bg-white shadow-2xl rounded-xl p-8 w-full max-w-md h-[500px] // Fixed height to match calculator roughly
-      border-2 border-[#ed485e] // Theme border
-      flex flex-col items-center justify-center text-center // Center content
-      transform transition-all duration-300 hover:scale-102 hover:shadow-xl // Floating effect
+      bg-white shadow-2xl rounded-xl p-8 w-full max-w-md h-[500px]
+      border-2 border-[#ed485e]
+      flex flex-col items-center justify-center text-center
+      transform transition-all duration-300 
     "
     >
       <div className="flex justify-center mb-6">
