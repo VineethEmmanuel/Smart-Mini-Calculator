@@ -8,7 +8,7 @@ const Display = ({ expression, displayValue }) => {
       </div>
 
       <div className="text-4xl font-light h-12 flex items-center justify-end">
-        {displayValue === "" ? "0" : displayValue}{" "}
+        {displayValue === "" ? "0" : displayValue}
       </div>
     </div>
   );
