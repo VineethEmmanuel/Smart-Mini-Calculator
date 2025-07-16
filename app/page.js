@@ -33,11 +33,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden grid grid-cols-1 md:grid-cols-[280px_1fr] bg-gradient-to-br from-gray-100 to-gray-200 font-inter">
       <Head>
         <title>Smart Mini Calculator</title>
-        <meta
-          name="description"
-          content="A simple calculator built with Next.js and Tailwind CSS with history and showcase"
-        />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <aside
