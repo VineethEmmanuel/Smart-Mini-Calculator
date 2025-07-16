@@ -52,6 +52,7 @@ export default function Home() {
           history={history}
           onClearHistory={handleClearHistory}
           onDeleteItem={handleDeleteItem}
+          showCalculator={showCalculator}
         />
       </aside>
 

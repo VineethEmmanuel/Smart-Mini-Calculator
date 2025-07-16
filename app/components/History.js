@@ -1,16 +1,16 @@
 import React from "react";
 
-const History = ({ history, onClearHistory, onDeleteItem }) => {
+const History = ({ history, onClearHistory, onDeleteItem, showCalculator }) => {
   return (
     <div className="w-full flex flex-col h-full">
       <h2 className="text-2xl font-bold text-center mb-6">
-        Calculation History
+        {showCalculator ? "Calculation History" : "Welcome"}
       </h2>
 
       <div className="flex-grow overflow-y-auto pr-2 custom-scrollbar">
         {history.length === 0 ? (
           <p className="text-gray-200 text-sm text-center mt-4">
-            No history yet.
+            {showCalculator ? "" : "Launch the calculator to start!"}
           </p>
         ) : (
           <ul className="space-y-3">
