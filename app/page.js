@@ -33,7 +33,12 @@ export default function Home() {
     <div className="h-screen overflow-hidden grid grid-cols-1 md:grid-cols-[280px_1fr] bg-gradient-to-br from-gray-100 to-gray-200 font-inter">
       <Head>
         <title>Smart Mini Calculator</title>
-        <link rel="icon" href="/favicon.svg" />
+        <link
+          type="image/png"
+          sizes="16x16"
+          rel="icon"
+          href=".../icons8-calculator-external-tanah-basah-basic-outline-tanah-basah-16.png"
+        />
       </Head>
 
       <aside
